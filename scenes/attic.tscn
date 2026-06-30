@@ -1,0 +1,303 @@
+[gd_scene format=3 uid="uid://bolasso143pqo"]
+
+[ext_resource type="Texture2D" uid="uid://bm6wrerb7anvl" path="res://assets/wallpaper.png" id="1_hckyx"]
+[ext_resource type="Texture2D" uid="uid://wa64t1ak7lwx" path="res://assets/wood.png" id="2_snuys"]
+[ext_resource type="Texture2D" uid="uid://cucthlk2u4yns" path="res://assets/atticwindow.png" id="3_qajrb"]
+[ext_resource type="Texture2D" uid="uid://b3bfrulqjgj7b" path="res://assets/box2.png" id="4_5pnpo"]
+[ext_resource type="Script" uid="uid://c42gauusauqt1" path="res://scenes/area_2d.gd" id="4_wyt8s"]
+[ext_resource type="Texture2D" uid="uid://b0b3ysid1vjiy" path="res://assets/bloodblanket.png" id="5_v6ge5"]
+[ext_resource type="Script" uid="uid://qx8wvemtjsrj" path="res://scenes/box_7_area.gd" id="6_5pnpo"]
+[ext_resource type="Script" uid="uid://hrb2m4vj486n" path="res://scenes/box_2_area.gd" id="6_v6ge5"]
+[ext_resource type="PackedScene" uid="uid://ddnbl1leq11wi" path="res://scenes/blob_ghost_player.tscn" id="6_wyt8s"]
+[ext_resource type="Script" uid="uid://mle5dv3n2p81" path="res://scenes/blanket_area.gd" id="7_5pnpo"]
+[ext_resource type="PackedScene" path="res://scenes/ghostE.tscn" id="8_5pnpo"]
+[ext_resource type="FontFile" uid="uid://ypiro7g7gq5h" path="res://fonts/PixelOperator8.ttf" id="11_245kf"]
+[ext_resource type="Texture2D" uid="uid://tc0xivlrwqqr" path="res://assets/blackBar.png" id="11_dwpn6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_245kf"]
+texture = ExtResource("1_hckyx")
+0:0/size_in_atlas = Vector2i(8, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dwpn6"]
+sources/0 = SubResource("TileSetAtlasSource_245kf")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sskvc"]
+texture = ExtResource("2_snuys")
+0:0/size_in_atlas = Vector2i(8, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_26uk4"]
+sources/0 = SubResource("TileSetAtlasSource_sskvc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sskvc"]
+size = Vector2(46, 63.600006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hckyx"]
+size = Vector2(84.32228, 48.511246)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_245kf"]
+size = Vector2(107.37441, 77.182625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snuys"]
+size = Vector2(140.74197, 33.947823)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwpn6"]
+size = Vector2(149.42972, 71.2348)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyt8s"]
+size = Vector2(65.28572, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26uk4"]
+size = Vector2(83.85715, 28.142868)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qajrb"]
+size = Vector2(1434, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pnpo"]
+size = Vector2(195, 385.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ge5"]
+size = Vector2(1336, 275)
+
+[node name="Node2D" type="Node2D" unique_id=1524747779]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1174665849]
+
+[node name="TileMap" type="TileMap" parent="CanvasLayer" unique_id=769645254]
+tile_set = SubResource("TileSet_dwpn6")
+format = 2
+layer_0/tile_data = PackedInt32Array(1572867, 0, 0, 1048579, 0, 0, 524291, 0, 0, 131075, 0, 0, 131079, 0, 0, 131083, 0, 0, 131087, 0, 0, 131091, 0, 0, 131095, 0, 0, 131099, 0, 0, 131107, 0, 0, 131115, 0, 0, 131123, 0, 0, 131131, 0, 0, 131139, 0, 0, 131143, 0, 0, 655431, 0, 0, 1179719, 0, 0, 1572935, 0, 0, 1572927, 0, 0, 1048639, 0, 0, 589887, 0, 0, 655371, 0, 0, 655379, 0, 0, 655387, 0, 0, 655395, 0, 0, 655403, 0, 0, 655411, 0, 0, 655415, 0, 0, 1179703, 0, 0, 1572919, 0, 0, 1572911, 0, 0, 1572903, 0, 0, 1572895, 0, 0, 1572887, 0, 0, 1572879, 0, 0, 1572871, 0, 0, 1179655, 0, 0, 1179663, 0, 0, 1179671, 0, 0, 1179679, 0, 0, 1179687, 0, 0, 1179695, 0, 0, 131151, 0, 0, 655439, 0, 0, 1179727, 0, 0, 1572943, 0, 0)
+
+[node name="TileMap2" type="TileMap" parent="CanvasLayer" unique_id=2075325361]
+tile_set = SubResource("TileSet_26uk4")
+format = 2
+layer_0/tile_data = PackedInt32Array(2490436, 0, 0, 2490428, 0, 0, 2490421, 0, 0, 2490415, 0, 0, 2490408, 0, 0, 2490402, 0, 0, 2490395, 0, 0, 2490388, 0, 0, 2490381, 0, 0, 2490374, 0, 0, 2490368, 0, 0, 2097155, 0, 0, 2097162, 0, 0, 2097169, 0, 0, 2097176, 0, 0, 2097183, 0, 0, 2097190, 0, 0, 2097197, 0, 0, 2097204, 0, 0, 2097211, 0, 0, 2097218, 0, 0, 2097225, 0, 0, 3014656, 0, 0, 3014664, 0, 0, 3014672, 0, 0, 3014680, 0, 0, 3014688, 0, 0, 3014696, 0, 0, 3014704, 0, 0, 3014712, 0, 0, 3014720, 0, 0, 3014728, 0, 0, 3014736, 0, 0, 2490448, 0, 0, 2097232, 0, 0, 2555977, 0, 0, 2162683, 0, 0)
+
+[node name="Atticwindow" type="Sprite2D" parent="CanvasLayer" unique_id=802676442]
+position = Vector2(520.00006, 294)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_qajrb")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/Atticwindow" unique_id=1452494845]
+script = ExtResource("4_wyt8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Atticwindow/Area2D" unique_id=1862400980]
+position = Vector2(-1.4000244, 3)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_sskvc")
+
+[node name="Node2D" parent="CanvasLayer/Atticwindow/Area2D" unique_id=1655711966 instance=ExtResource("8_5pnpo")]
+position = Vector2(114.85715, -196)
+scale = Vector2(0.57142854, 0.57142854)
+
+[node name="letterE" parent="CanvasLayer/Atticwindow/Area2D/Node2D/EAnim" index="0"]
+visible = false
+position = Vector2(680, 290)
+scale = Vector2(1.5, 1.5)
+
+[node name="Label" type="Label" parent="CanvasLayer/Atticwindow" unique_id=279537840]
+visible = false
+z_index = 6
+texture_filter = 1
+offset_left = -78.80002
+offset_top = 171.19998
+offset_right = 123.19998
+offset_bottom = 194.19998
+theme_override_colors/font_color = Color(0.84947944, 0.84947944, 0.84947944, 1)
+theme_override_fonts/font = ExtResource("11_245kf")
+theme_override_font_sizes/font_size = 16
+text = "A large window"
+
+[node name="Box2" type="Sprite2D" parent="CanvasLayer" unique_id=894543890]
+position = Vector2(194.00002, 451)
+scale = Vector2(1.6484375, 1.7109375)
+texture = ExtResource("4_5pnpo")
+
+[node name="Area2D" type="StaticBody2D" parent="CanvasLayer/Box2" unique_id=1415220565]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Box2/Area2D" unique_id=420615778]
+position = Vector2(16.075813, -0.29214478)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_hckyx")
+
+[node name="box2Area" type="Area2D" parent="CanvasLayer/Box2" unique_id=357757193]
+script = ExtResource("6_v6ge5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Box2/box2Area" unique_id=448860824]
+position = Vector2(16.682442, 14.011444)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_245kf")
+
+[node name="Node2D" parent="CanvasLayer/Box2/box2Area" unique_id=1065770399 instance=ExtResource("8_5pnpo")]
+position = Vector2(114.85715, -196)
+scale = Vector2(0.57142854, 0.57142854)
+
+[node name="letterE" parent="CanvasLayer/Box2/box2Area/Node2D/EAnim" index="0"]
+visible = false
+position = Vector2(230.00003, 329)
+scale = Vector2(1.5, 1.5)
+
+[node name="Label" type="Label" parent="CanvasLayer/Box2" unique_id=763117997]
+visible = false
+z_index = 1
+offset_left = 108.58767
+offset_top = 165.4064
+offset_right = 310.58768
+offset_bottom = 188.4064
+theme_override_colors/font_color = Color(0.84947944, 0.84947944, 0.84947944, 1)
+theme_override_fonts/font = ExtResource("11_245kf")
+theme_override_font_sizes/font_size = 16
+text = "Some open boxes"
+
+[node name="Box3" type="Sprite2D" parent="CanvasLayer" unique_id=318953575]
+position = Vector2(251.00003, 492.99994)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Box4" type="Sprite2D" parent="CanvasLayer" unique_id=310060499]
+position = Vector2(836.99994, 462.00003)
+scale = Vector2(1.8984375, 1.90625)
+texture = ExtResource("4_5pnpo")
+
+[node name="Box5" type="Sprite2D" parent="CanvasLayer" unique_id=1462556332]
+position = Vector2(778, 498.99994)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Box6" type="Sprite2D" parent="CanvasLayer" unique_id=946222967]
+position = Vector2(969.00006, 475)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Box7" type="Sprite2D" parent="CanvasLayer" unique_id=2074912758]
+position = Vector2(917.00006, 496.99997)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Area2D" type="StaticBody2D" parent="CanvasLayer/Box7" unique_id=1838526809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Box7/Area2D" unique_id=1203581277]
+position = Vector2(-31.56549, -23.65216)
+scale = Vector2(1, 1.0000004)
+shape = SubResource("RectangleShape2D_snuys")
+
+[node name="box7Area" type="Area2D" parent="CanvasLayer/Box7" unique_id=1646797114]
+script = ExtResource("6_5pnpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Box7/box7Area" unique_id=2123162383]
+position = Vector2(-30.117554, -7.2348022)
+scale = Vector2(1, 1.0000004)
+shape = SubResource("RectangleShape2D_dwpn6")
+
+[node name="Node2D" parent="CanvasLayer/Box7/box7Area" unique_id=1327103775 instance=ExtResource("8_5pnpo")]
+position = Vector2(114.85715, -196)
+scale = Vector2(0.57142854, 0.57142854)
+
+[node name="letterE" parent="CanvasLayer/Box7/box7Area/Node2D/EAnim" index="0"]
+visible = false
+position = Vector2(871, 339)
+scale = Vector2(1.5, 1.5)
+
+[node name="Label" type="Label" parent="CanvasLayer/Box7" unique_id=967501023]
+visible = false
+z_index = 4
+offset_left = -289.01364
+offset_top = 129.6696
+offset_right = -87.01364
+offset_bottom = 152.6696
+theme_override_colors/font_color = Color(0.84947944, 0.84947944, 0.84947944, 1)
+theme_override_fonts/font = ExtResource("11_245kf")
+theme_override_font_sizes/font_size = 16
+text = "A lot of boxes"
+
+[node name="Box8" type="Sprite2D" parent="CanvasLayer" unique_id=2133224662]
+position = Vector2(837, 531)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Box9" type="Sprite2D" parent="CanvasLayer" unique_id=725482841]
+position = Vector2(197, 525)
+scale = Vector2(1.7265625, 1.796875)
+texture = ExtResource("4_5pnpo")
+
+[node name="Bloodblanket" type="Sprite2D" parent="CanvasLayer" unique_id=650679835]
+position = Vector2(481, 634)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("5_v6ge5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CanvasLayer/Bloodblanket" unique_id=1387011929]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Bloodblanket/StaticBody2D" unique_id=309996986]
+position = Vector2(2.285723, -17.142857)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_wyt8s")
+
+[node name="blanketArea" type="Area2D" parent="CanvasLayer/Bloodblanket" unique_id=111487047]
+script = ExtResource("7_5pnpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Bloodblanket/blanketArea" unique_id=1649793153]
+position = Vector2(2.6429138, 7.642853)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_26uk4")
+
+[node name="Node2D" parent="CanvasLayer/Bloodblanket/blanketArea" unique_id=1136480096 instance=ExtResource("8_5pnpo")]
+position = Vector2(114.85715, -196)
+scale = Vector2(0.57142854, 0.57142854)
+
+[node name="letterE" parent="CanvasLayer/Bloodblanket/blanketArea/Node2D/EAnim" index="0"]
+visible = false
+position = Vector2(483, 526)
+scale = Vector2(1.5, 1.5)
+
+[node name="BlackBar" type="Sprite2D" parent="CanvasLayer/Bloodblanket" unique_id=1440560407]
+position = Vector2(53.14287, 64.000015)
+scale = Vector2(0.8811384, 0.44084823)
+texture = ExtResource("11_dwpn6")
+
+[node name="Label" type="Label" parent="CanvasLayer/Bloodblanket" unique_id=127028976]
+visible = false
+offset_left = -38.285713
+offset_top = 53.7143
+offset_right = 163.7143
+offset_bottom = 76.714294
+theme_override_colors/font_color = Color(0.84947944, 0.84947944, 0.84947944, 1)
+theme_override_fonts/font = ExtResource("11_245kf")
+theme_override_font_sizes/font_size = 16
+text = "A bloody blanket"
+
+[node name="blobGhostPlayer" parent="CanvasLayer" unique_id=1460603967 instance=ExtResource("6_wyt8s")]
+position = Vector2(1106, 643)
+scale = Vector2(1.5, 1.5)
+
+[node name="Node" type="Node" parent="." unique_id=1651293846]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node" unique_id=587876745]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D" unique_id=1604696622]
+position = Vector2(665, 249)
+shape = SubResource("RectangleShape2D_qajrb")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node" unique_id=853098656]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D2" unique_id=2048658441]
+position = Vector2(-64.5, 628.375)
+shape = SubResource("RectangleShape2D_5pnpo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node" unique_id=218455619]
+position = Vector2(1469, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D3" unique_id=27935073]
+position = Vector2(-72, 626)
+shape = SubResource("RectangleShape2D_5pnpo")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node" unique_id=274011534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D4" unique_id=846615451]
+position = Vector2(645, 899)
+shape = SubResource("RectangleShape2D_v6ge5")
+
+[editable path="CanvasLayer/Atticwindow/Area2D/Node2D"]
+[editable path="CanvasLayer/Box2/box2Area/Node2D"]
+[editable path="CanvasLayer/Box7/box7Area/Node2D"]
+[editable path="CanvasLayer/Bloodblanket/blanketArea/Node2D"]
