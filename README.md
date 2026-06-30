@@ -15,7 +15,9 @@ With that being said, we can move on to how to use these ingredients to make our
 
 ## Prerequisites
 Godot game engine downloaded, download here: https://godotengine.org/
+
 Player character made using CharacterBody2D, tutorial: https://www.youtube.com/watch?v=3M3olvGE-EI
+
 A simple background image and an object that you can drag and drop into your Godot scene
 
 
