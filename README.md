@@ -1,4 +1,4 @@
-###  How to make interactable objects in Godot
+### How to make interactable objects in Godot
 
 
 ## Introduction
@@ -19,7 +19,7 @@ Player character made using CharacterBody2D, tutorial: https://www.youtube.com/w
 A simple background image and an object that you can drag and drop into your Godot scene
 
 
-##Getting Started
+## Getting Started
 Now, in your Godot, you want to make sure that your player character has a CollisionShape2D attached to it because that is the most crucial piece to being able to make interactions happen. Here’s my character as an example:
 
 <img width="512" height="265" alt="boyGhost" src="https://github.com/user-attachments/assets/e5e066ca-4ad1-47d6-b00a-3454eb98165b" />
@@ -40,7 +40,7 @@ From here you can drag the shape and place it onto your object, change its shape
 
 Getting the placement of the collision shapes to feel just right is a very trial and error heavy process, so I suggest you take your time and experiment with the placement and sizing of your collision shapes to get them just right. Now, if you try playing your game, you will not be able to walk into these objects anymore, and will have to walk around them!
 
-## adding interactivity
+## Adding interactivity
 Now lets move onto the more fun part, adding the ability to interact with objects in your game! To start off you want to add an Area2D node to each of the objects in your game that you specifically want some type of interaction with like being able to click on them, or run into them and trigger something. Once you have that add a collision shape to them, but make sure that these collision shapes are larger than the ones for the static body because these ones you will need your character to enter in order to make the interaction happen!
 
 Here’s my game for example, as you can see these collision shapes are much larger than the ones for the StaticBody2D:
